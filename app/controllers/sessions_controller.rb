@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to controller: 'application', action: 'hello'
     else
       session[:name] = params[:name]
-      redirect_to '/'
+      redirect_to controller: 'application', action: 'hello'
     end
   end
 
